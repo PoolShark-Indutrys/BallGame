@@ -216,9 +216,12 @@ function animate() {
                         gsap.to(enemy, {
                             radius: enemy.radius - 10
                         })
+                        score += 25
+                        scoreEl.innerHTML = score
+
                     } else {
                         enemies.splice(indexE, 1)
-                        score ++
+                        score += 100
                         scoreEl.innerHTML = score
                     }
                     projectiles.splice(indexP, 1)
